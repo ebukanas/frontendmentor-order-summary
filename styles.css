@@ -1,0 +1,154 @@
+
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --max-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--pale-blue);
+    font-family: 'Red Hat Display', sans-serif;
+    padding: 1em;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+
+a {
+    cursor: pointer;
+}
+
+.container {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100vh;
+}
+
+.card {
+    display: grid;
+    background-color: white;
+    max-width: 25em;
+    border-radius:1.5em;
+}
+
+.card-image img {
+    width: 100%;
+    border-radius: 1.5em 1.5em 0 0;
+}
+
+.card-main {
+    padding: 1.5em 2em;
+}
+
+.description {
+    text-align: center;
+    padding: 0 1em;
+}
+
+.description h1 {
+    font-size: 1.5em;
+}
+
+.description p {
+    font-size: 1em;
+    color: var(--desaturated-blue);
+    margin-bottom: 1.5em;
+    line-height: 1.5;
+}
+
+.price-section img {
+    float: left;
+    width: 60px;
+    height: 60px;
+}
+
+.price-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    background-color: var(--max-pale-blue);
+    padding: 15px 15px;
+    border-radius: 1em;
+}
+
+.price-section li {
+    list-style: none;
+}
+
+.price-section ul {
+    margin: 0;
+    padding: 0;
+}
+
+.price-section li:first-child {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.price-section li:nth-last-child(2) {
+    margin-top: 5px;
+    color: var(--desaturated-blue);
+}
+
+.price-section a {
+    color: var(--bright-blue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.price-section a:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.card-bottom {
+    margin-top: 1.5em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.payment-button {
+    background-color: var(--bright-blue);
+    padding: 1.2em 0;
+    width: 100%;
+    border-radius: 1em;
+    border-style: none;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    box-shadow:0 15px 20px hsl(245deg 75% 52% / 23%);
+    cursor: pointer;
+}
+
+.payment-button:hover {
+    opacity: 0.8;
+}
+
+.payment-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.cancel-order {
+    margin-top: 1.6em;
+    padding-bottom: 0.7em;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+}
+
+.cancel-order:hover {
+    color: black;
+}
+
+
+@media screen and (max-width: 375px) {
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+}
